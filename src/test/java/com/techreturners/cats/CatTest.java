@@ -68,7 +68,7 @@ public class CatTest {
         String eat = domesticCat.eat();
         assertTrue(
                 ("PurrrrrrrIt will do I suppose".equals(eat) || "Purrrrrrr".equals(eat)),
-                "domestic cat may have 2 different sound"
+                "Some domesticCat will randomly let out a dismissive \"It will do I suppose\" "
         );
     }
 
