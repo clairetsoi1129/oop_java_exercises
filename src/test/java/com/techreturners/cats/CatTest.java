@@ -44,6 +44,11 @@ public class CatTest {
         assertEquals(1100, lionCat.getAverageHeight());
     }
 
+    @Test
+    public void checkCheetahHeight() {
+        Cat cheetahCat = new CheetahCat();
+        assertEquals(1000, cheetahCat.getAverageHeight());
+    }
 
     @Test
     public void feedTheLion() {
@@ -60,6 +65,28 @@ public class CatTest {
     @Test
     public void feedTheCat() {
         Cat domesticCat = new DomesticCat();
-        assertEquals("Purrrrrrr", domesticCat.eat());
+        String eat = domesticCat.eat();
+        assertTrue(
+                ("PurrrrrrrIt will do I suppose".equals(eat) || "Purrrrrrr".equals(eat)),
+                "domestic cat may have 2 different sound"
+        );
+    }
+
+    @Test
+    public void testCatRun() {
+        Cat domesticCat = new DomesticCat();
+        assertEquals("Domestic Cat is running. Purrrrrrr", domesticCat.run());
+    }
+
+    @Test
+    public void testLionRun() {
+        Cat lionCat = new LionCat();
+        assertEquals("Lion is running. Roar!!!!", lionCat.run());
+    }
+
+    @Test
+    public void testCheetahRun() {
+        Cat cheetahCat = new CheetahCat();
+        assertEquals("Cheetah is running. Zzzzzzz", cheetahCat.run());
     }
 }
